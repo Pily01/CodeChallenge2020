@@ -176,7 +176,9 @@
             <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
+
         <div class="row justify-content-around">
+          <!-- SATI SODA -->
           <div class="col-md-4 portfolio-item">
             <a
               class="portfolio-link"
@@ -199,6 +201,7 @@
               <p class="text-muted">Thirsty ?</p>
             </div>
           </div>
+          <!-- TÉRMINOS Y CONDICIONES -->
           <div class="col-md-4 portfolio-item">
             <a
               class="portfolio-link"
@@ -219,6 +222,30 @@
             <div class="portfolio-caption">
               <h4>Términos y Condiciones</h4>
               <p class="text-muted">Llenar y firmar.</p>
+            </div>
+          </div>
+
+          <!-- RÚBRICA -->
+          <div class="col-md-4 portfolio-item">
+            <a
+              class="portfolio-link"
+              data-toggle="modal"
+              href="#portfolioModal3"
+            >
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img
+                class="img-fluid"
+                src="img/portfolio/05-thumbnail.png"
+                alt=""
+              />
+            </a>
+            <div class="portfolio-caption">
+              <h4>Rúbrica</h4>
+              <p class="text-muted">Apégate a los criterios.</p>
             </div>
           </div>
         </div>
@@ -549,51 +576,66 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <!-- ////////////// F O R M //////////////////-->
+            <form
+              id="contactForm"
+              name="sentMessage"
+              novalidate="novalidate"
+              action="/send-email"
+              method="post"
+            >
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
+                    <!-- /// Name-->
                     <input
                       class="form-control"
+                      name="name"
                       id="name"
                       type="text"
                       placeholder="Tu Nombre *"
                       required="required"
-                      data-validation-required-message="Please enter your name."
+                      data-validation-required-message="POR FAVOR INGRESA TU NOMBRE."
                     />
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
+                    <!-- /// Mail-->
                     <input
                       class="form-control"
+                      name="email"
                       id="email"
                       type="email"
                       placeholder="Tu Mail *"
                       required="required"
-                      data-validation-required-message="Please enter your email address."
+                      data-validation-required-message="POR FAVOR INGRESA TU MAIL."
                     />
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
+                    <!-- /// Cell Phone-->
                     <input
                       class="form-control"
+                      name="phone"
                       id="phone"
                       type="tel"
                       placeholder="Tu Teléfono *"
                       required="required"
-                      data-validation-required-message="Please enter your phone number."
+                      data-validation-required-message="POR FAVOR INGRESA TU NÚMERO TELEFÓNICO."
                     />
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
+                    <!-- /// Text-->
                     <textarea
                       class="form-control"
+                      name="text"
                       id="message"
                       placeholder="Tu Mensaje *"
                       required="required"
-                      data-validation-required-message="Please enter a message."
+                      data-validation-required-message="POR FAVOR INGRESA TU MENSAJE."
                     ></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
@@ -706,6 +748,52 @@
                     Descarga este documento, llénalo, y fírmalo para poder tomar
                     en cuenta tu proyecto. Recuerda adjuntarlo con tu proyecto
                     cuando lo envíes.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    <i class="fas fa-times"></i>
+                    Regresar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal3"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Rúbrica</h2>
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="img/portfolio/05-full.png"
+                    alt=""
+                  />
+                  <p>
+                    Apégate a estos criterios para asergurarte que tu proyecto
+                    tenga el mayor puntaje posible.
                   </p>
                   <button
                     class="btn btn-primary"
